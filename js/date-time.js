@@ -9,37 +9,18 @@ class DateTime {
 		this._setTime = this._setTime.bind(this);
 		this._twentyFourMode = false;
 		this._clockUpdater = null;
-		this._monthsArr = [
-			'January',
-			'February',
-			'March',
-			'April',
-			'May',
-			'June',
-			'July',
-			'August',
-			'September',
-			'October',
-			'November',
-			'December'
-		];
 
 		this._daysArr = [
-			'Sunday',
-			'Monday',
-			'Tuesday',
-			'Wednesday',
-			'Thursday',
-			'Friday',
-			'Saturday'
+			'일',
+			'월',
+			'화',
+			'수',
+			'목',
+			'금',
+			'토'
 		];
 
 		this._init();
-	}
-
-	_getDayOrdinal(day) {
-		return day + (day > 0 ? ['th', 'st', 'nd', 'rd'][(day > 3 && day < 21) ||
-			day % 10 > 3 ? 0 : day % 10] : '');
 	}
 
 	// Append zero
@@ -60,13 +41,7 @@ class DateTime {
 		let greeterSuffix = null;
 		min = this._appendZero(min);
 
-		if (hour >= 6 && hour < 12) {
-			greeterSuffix = 'Morning';
-		} else if (hour >= 12 && hour < 18) {
-			greeterSuffix = 'Afternoon';
-		} else {
-			greeterSuffix = 'Evening';
-		}
+		greeterSuffix = '안녕하세요!';
 
 		// 24-hour mode
 		if (this._twentyFourMode === true) {
@@ -80,11 +55,11 @@ class DateTime {
 			this._sidebarClock.innerText = `${hour}:${min} ${midDay}`;
 			this._greeterClock.innerText = `${hour}:${min} ${midDay}`;
 		}
-		this._sidebarDate.innerText = `${this._daysArr[date.getDay()]}, ${this._monthsArr[date.getMonth()]} ` +
-			`${this._appendZero(date.getDate())}, ${date.getFullYear()}`;
-		this._greeterDate.innerText = `${this._getDayOrdinal(this._appendZero(date.getDate()))} of ` +
-			`${this._monthsArr[date.getMonth()]}, ${this._daysArr[date.getDay()]}`;
-		this._greeterMessage.innerText = `Good ${greeterSuffix}!`;
+
+		this._sidebarDate.innerText = `${date.getFullYear()}년 ${date.getMonth()}월 ${date.getDate()}일 ${this._daysArr[date.getDay()]}요일`
+		this._greeterDate.innerText = `${date.getFullYear()}년 ${date.getMonth()}월 ${date.getDate()}일 ${this._daysArr[date.getDay()]}요일`
+
+		this._greeterMessage.innerText = `${greeterSuffix}`;
 	}
 
 	_startClock() {

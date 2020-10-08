@@ -4,6 +4,8 @@
 
 A sleek, modern, and glorified lightdm webkit2 theme
 
+한국어로 변경
+
 ## [Live Demo](https://manilarome.github.io/lightdm-webkit2-theme-glorious)
 
 ### Demo password: `toor`

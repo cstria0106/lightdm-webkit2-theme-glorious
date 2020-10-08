@@ -72,35 +72,10 @@ class Debug {
 				],
 				users: [
 					{
-						display_name: 'Yasuho Hirose',
-						username: 'bestgirl',
-						image: 'assets/profiles/yasuhoh.jpg'
+						display_name: 'User',
+						username: 'Username',
+						image: 'assets/profiles/user.svg'
 					},
-					{
-						display_name: 'Josuke Higashikata',
-						username: '4balls',
-						image: 'assets/profiles/josukeh.jpg'
-					},
-					{
-						display_name: 'Johnny Joestar',
-						username: 'tellhimyourself',
-						image: 'assets/profiles/johnnyj.jpg'
-					},
-					{
-						display_name: 'Gyro Zepelli',
-						username: 'pizzamozarella',
-						image: 'assets/profiles/gyroz.jpg'
-					},
-					{
-						display_name: 'Diego Brando',
-						username: 'diosaur',
-						image: 'assets/profiles/diegob.jpg'
-					},
-					{
-						display_name: 'Funny Valentine',
-						username: 'napkinwiper',
-						image: 'assets/profiles/funnyv.jpg'
-					}
 				],
 				languages: [
 					{

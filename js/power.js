@@ -21,28 +21,28 @@ class Power {
 	_createPowerObject() {
 		this._powerObject = [
 			{
-				'name': 'Shutdown',
+				'name': '종료',
 				'icon': 'shutdown',
 				'enabled': lightdm.can_shutdown,
 				'powerCommand': lightdm.shutdown,
 				'message': 'Shutting down...'
 			},
 			{
-				'name': 'Reboot',
+				'name': '다시시작',
 				'icon': 'restart',
 				'enabled': lightdm.can_restart,
 				'powerCommand': lightdm.restart,
 				'message': 'Rebooting...'
 			},
 			{
-				'name': 'Hibernate',
+				'name': '최대 절전 모드',
 				'icon': 'hibernate',
 				'enabled': lightdm.can_hibernate,
 				'powerCommand': lightdm.hibernate,
 				'message': 'Hibernating...'
 			},
 			{
-				'name': 'Suspend',
+				'name': '절전 모드',
 				'icon': 'suspend',
 				'enabled': lightdm.can_suspend,
 				'powerCommand': lightdm.suspend,
