@@ -56,8 +56,8 @@ class DateTime {
 			this._greeterClock.innerText = `${hour}:${min} ${midDay}`;
 		}
 
-		this._sidebarDate.innerText = `${date.getFullYear()}년 ${date.getMonth()}월 ${date.getDate()}일 ${this._daysArr[date.getDay()]}요일`
-		this._greeterDate.innerText = `${date.getFullYear()}년 ${date.getMonth()}월 ${date.getDate()}일 ${this._daysArr[date.getDay()]}요일`
+		this._sidebarDate.innerText = `${date.getFullYear()}년 ${date.getMonth() + 1}월 ${date.getDate()}일 ${this._daysArr[date.getDay()]}요일`
+		this._greeterDate.innerText = `${date.getFullYear()}년 ${date.getMonth() + 1}월 ${date.getDate()}일 ${this._daysArr[date.getDay()]}요일`
 
 		this._greeterMessage.innerText = `${greeterSuffix}`;
 	}
